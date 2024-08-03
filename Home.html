@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIC3TECH - Our pleasure building your creation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 280px;
+            height: 400px;
+            margin: 0 10px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            flex-grow: 1;
+            object-fit: cover;
+        }
+
+        .card-content {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .card-content h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .card-content .price {
+            font-weight: bold;
+        }
+
+        .discount {
+            color: red;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .icons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .icons a {
+            color: #333;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        .icons a:hover {
+            color: #4CAF50;
+        }
+
+        .cart-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .cart-btn:hover {
+            background-color: #333;
+        }
+        
+.header .input-box2 {
+    position: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 5px;
+    margin:30px 0;
+
+}
+
+.input-box2 input {
+    width: 60%;
+    height: 40%;
+    background: transparent;
+    position: relative;
+    border:none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box2 input::placeholder{
+    color: #fff;
+}
+.input-box2 i{
+    position: center;
+    right: 1px;
+    top: 100%;
+    font-size: 20px;
+}
+
+
+footer {
+  background-color: #4CAF50;
+  padding: 20px 40px;
+  text-align: center;
+}
+        
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="whatsappimage1234.jpg" alt="logo" width="400" height="100"/>
+    <form class="example" action="/action_page.php" style="margin:auto;max-width:500px">
+        <div class="input-box2">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+</header>
+<nav>
+    <a href="Home.html" alt="Go to your home page">HOME</a>
+    <a href="YOURACCOUNT.html" alt="Go to your account page">YOUR ACCOUNT</a>
+    <a href="SHOPPINGCART.html" alt="Go to your shopping cart page">SHOPPING CART</a>
+    <a href="ABOUTUS.html" alt="Go to your about us page">ABOUT US</a>
+    <a href="CONTACTUS.html" alt="Go to your contact us page">CONTACT US</a>
+</nav>
+
+<div class="container">
+    <h1>Latest <span>Products</span></h1>
+    <div class="swiper-container">
+        <div class="swiper-wrapper"> 
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-10%</span>
+                    <!-- has update images -->
+                    <img src="image2/download (2).jpg" alt="OBSIDIAN GAMING PC" >
+                    <div class="card-content">
+                        <h3>OBSIDIAN GAMING PC</h3>
+                        <div class="price">Rs 59,200  </div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('OBSIDIAN GAMING PC', 59200, 'image2/download (2).jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-15%</span>
+                    <img src="image2/SY-PCBuild-Artemis.jpg" alt="VALKYRIE GAMING PC">
+                    <div class="card-content">
+                        <h3>VALKYRIE GAMING PC</h3>
+                        <div class="price">Rs 42,000 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn" onclick="addToCart('VALKYRIE GAMING PC', 42000, 'image2/SY-PCBuild-Artemis.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-20%</span>
+                    <img src="image2/SY-PCBuild-DarkValkyrie.jpg" alt="ARMADA GAMING PC">
+                    <div class="card-content">
+                        <h3>ARMADA GAMING PC</h3>
+                        <div class="price">Rs 82,000 <span> </span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('ARMADA GAMING PC', 82000, 'image2/SY-PCBuild-DarkValkyrie.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-5%</span>
+                    <img src="image2/SY-PCBuild-FrostNov2023.jpg" alt="HARLEQUIN GAMING PC">
+                    <div class="card-content">
+                        <h3>HARLEQUIN GAMING PC</h3>
+                        <div class="price">Rs 66,000  <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('HARLEQUIN GAMING PC', 66000, 'image2/SY-PCBuild-FrostNov2023.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-25%</span>
+                    <img src="image2/SY-PCBuild-Hyte.jpg" alt="DARK VALKYRIE GAMING PC">
+                    <div class="card-content">
+                        <h3>DARK VALKYRIE GAMING PC</h3>
+                        <div class="price">Rs 79,200  <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn" onclick="addToCart('DARK VALKYRIE GAMING PC', 79200, 'image2/SY-PCBuild-Hyte.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-30%</span>
+                    <img src="image2/download (2).jpg" alt="ASCENSION GAMING PC">
+                    <div class="card-content">
+                        <h3>ASCENSION GAMING PC</h3>
+                        <div class="price">Rs 72,200  <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn" onclick="addToCart('ASCENSION GAMING PC', 72200, 'image2/download (2).jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Popular <span>PC Gaming Parts</span></h1>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               
+                <div class="card">
+                    <span class="discount">-10%</span>
+                    <img src="image2/SY-PCBuild-Artemis.jpg" alt="TITAN GAMING PC">
+                    <div class="card-content">
+                        <h3>TITAN GAMING PC</h3>
+                        <div class="price">Rs 74,500 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn" onclick="addToCart('TITAN GAMING PC', 74500, 'image2/SY-PCBuild-Artemis')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards here -->
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-15%</span>
+                    <img src="image2/SY-PCBuild-IceMaiden.jpg" alt="PINK ODYSSEY AIRFLOW GAMING PC">
+                    <div class="card-content">
+                        <h3>PINK ODYSSEY AIRFLOW GAMING PC</h3>
+                        <div class="price">Rs 76,000 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('PINK ODYSSEY AIRFLOW GAMING PC', 76000, 'image2/SY-PCBuild-IceMaiden.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-20%</span>
+                    <img src="image2/SY-PCBuild-DarkValkyrie.jpg" alt="ARTEMIC GAMING PC">
+                    <div class="card-content">
+                        <h3>ARTEMIC GAMING PC</h3>
+                        <div class="price">Rs 78,300 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('ARTEMIC GAMING PC', 78300, 'image2/SY-PCBuild-DarkValkyrie.jpg')">Add to Cart</a>
+
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-5%</span>
+                    <img src="image2/SY-PCBuild-FrostNov2023.jpg" alt="FROST GAMING PC">
+                    <div class="card-content">
+                        <h3>FROST GAMING PC</h3>
+                        <div class="price">Rs 69,500 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"onclick="addToCart('FROST GAMING PC', 69500, 'image2/SY-PCBuild-FrostNov2023.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-25%</span>
+                    <img src="image2/SY-PCBuild-Hyte.jpg" alt="SIGNATURE GAMING PC">
+                    <div class="card-content">
+                        <h3>SIGNATURE GAMING PC</h3>
+                        <div class="price">Rs 72,400 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn"
+                        onclick="addToCart('SIGNATURE GAMING PC', 72400, 'image2/SY-PCBuild-Hyte.jpg')">Add to Cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <span class="discount">-30%</span>
+                    <img src="image2/SY-PCBuild-PinkOdysseyAirflow_c3490a17-36d4-4c6c-8e4c-3a0558e301cc.jpg" alt="ICE MAIDEN GAMING PC">
+                    <div class="card-content">
+                        <h3>ICE MAIDEN GAMING PC</h3>
+                        <div class="price">Rs 59,900 <span></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn" onclick="addToCart('ICE MAIDEN GAMING PC', 59900, 'image2/SYimage2/SY-PCBuild-PinkOdysseyAirflow_c3490a17-36d4-4c6c-8e4c-3a0558e301cc.jpg-PCBuild-Hyte.jpg')">Add to Cart</a>
+
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+
+<script>
+    function addToCart(name, price, img) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price, img, quantity: 1 });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Item added to cart');
+    }
+    </script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+<footer>
+    <p>&copy; 2024 NIC3 TECH | All Rights Reserved</p>
+</footer>
+</body>
+</html>

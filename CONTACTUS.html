@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - NIC3TECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            max-width: 400px;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p, .contact-info a {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .map {
+            margin-top: 40px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+<header>
+    <img src="whatsappimage1234.jpg" alt="logo" width="400" height="100"/>
+    <form class="example" action="" style="margin:auto;max-width:500px">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</header>
+<nav>
+    <a href="HOME.html" alt="Go to your home page">HOME</a>
+    <a href="YOURACCOUNT.html" alt="Go to your account page">YOUR ACCOUNT</a>
+    <a href="SHOPPINGCART.html" alt="Go to your shopping cart page">SHOPPING CART</a>
+    <a href="ABOUTUS.html" alt="Go to your about us page">ABOUT US</a>
+    <a href="CONTACTUS.html" alt="Go to your contact us page">CONTACT US</a>
+</nav>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><i class="fa fa-map-marker"></i> Reduit, Mauritius</p>
+            <p><i class="fa fa-phone"></i> +230 5674 9890</p>
+            <p><i class="fa fa-envelope"></i> nic3tech@gmail.com</p>
+            <p><i class="fa fa-clock-o"></i> Mon - Fri: 9:00 AM - 5:00 PM</p>
+            <p><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100070513268799&mibextid=ZbWKwL">Facebook</a></p>
+            <p><i class="fa fa-twitter"></i> <a href="#">Twitter</a></p>
+            <p><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/kooshala-nundun-407423240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
+        </div>
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="send_message.php" method="post">
+                <input type="text" id="fname" name="fname" placeholder="Your Name" required>
+                <input type="email" id="femail" name="femail" placeholder="Your Email" required>
+                <input type="text" id="fsubject" name="fsubject" placeholder="Subject" required>
+                <textarea  name="fmessage" id="fmessage" name="fmessage" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="map">
+        <h2>Our Location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086287456383!2d144.95592781532176!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1c8a21f%3A0x5045675218ce6e0!2s123%20Tech%20Street%2C%20Tech%20City%2C%20TC%2012345!5e0!3m2!1sen!2sus!4v1622625275315!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 NIC3 TECH | All Rights Reserved</p>
+</footer>
+</body>
+</html>

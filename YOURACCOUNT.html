@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Account - NIC3TECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .account-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .account-section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .account-details, .order-history {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .account-details div, .order-history div {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .account-details input, .account-details button, .order-history table {
+            width: 100%;
+        }
+
+        .account-details button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .account-details button:hover {
+            background-color: #45a049;
+        }
+
+        .order-history table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .order-history th, .order-history td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .order-history th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="whatsappimage1234.jpg" alt="logo" width="400" height="100">
+    
+    <form action="connect.php" method="POST" class="example"  style="margin:auto;max-width:500px">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+   
+</header>
+<nav>
+    <a href="index.html" alt="Go to your home page">HOME</a>
+    <a href="YOURACCOUNT.html" alt="Go to your account page">YOUR ACCOUNT</a>
+    <a href="SHOPPINGCART.html" alt="Go to your shopping cart page">SHOPPING CART</a>
+    <a href="ABOUTUS.html" alt="Go to your about us page">ABOUT US</a>
+    <a href="CONTACTUS.html" alt="Go to your contact us page">CONTACT US</a>
+</nav>
+
+<div class="container">
+    <h1>Sign up</h1>
+
+    <div class="account-section">
+        <h2>Account Information</h2>
+        <div class="account-details">
+            <div>
+                <label>Full Name</label>
+                <input type="name", id="fname", name="fname",  placeholder="John bone">
+            </div>
+            <div>
+                <label>create Password</label>
+                <input type="password" id="fpassword" name="fpassword">
+                </div>
+            <div>
+                <label>Email</label>
+                <input type="email" id="femail" name="femail" placeholder="John bone">
+            </div>
+            <div>
+                <label>Phone</label>
+                <input type="tel" id="fphone" name="fphone" placeholder="12345678">
+            </div>
+            <div>
+                <label>Address</label>
+                <input type="text" id="faddress" name="faddress" placeholder="123 Street, City, Country">
+            </div>
+            <div>
+                <button type="submit">sign up</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="account-section">
+        <h2>Order History</h2>
+        <div class="order-history">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>2024-06-20</td>
+                        <td>Pc Nsx Raptor Gamers Desktop Gaming</td>
+                        <td>$504.00</td>
+                        <td>Shipped</td>
+                    </tr>
+                    <tr>
+                        <td>12346</td>
+                        <td>2024-06-18</td>
+                        <td>Gaming Laptop</td>
+                        <td>$1200.00</td>
+                        <td>Delivered</td>
+                    </tr>
+                    <tr>
+                        <td>12347</td>
+                        <td>2024-06-15</td>
+                        <td>Smartphone XYZ</td>
+                        <td>$800.00</td>
+                        <td>Processing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="account-section">
+        <h2>Change Password</h2>
+        <div class="account-details">
+            <div>
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password">
+            </div>
+            <div>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password">
+            </div>
+            <div>
+                <label for="confirm-password">Confirm New Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+            <div>
+                <button type="submit">Change Password</button>
+
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

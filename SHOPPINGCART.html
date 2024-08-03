@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart - NIC3TECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .cart-table th, .cart-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cart-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .cart-table td img {
+            width: 100px;
+            height: auto;
+        }
+
+        .cart-table input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .cart-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cart-actions button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .cart-actions button:hover {
+            background-color: #45a049;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+       
+        .header .input-box2 {
+    position: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 5px;
+    margin:30px 0;
+
+}
+
+.input-box2 input {
+    width: 60%;
+    height: 40%;
+    background: transparent;
+    position: relative;
+    border:none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box2 input::placeholder{
+    color: #fff;
+}
+.input-box2 i{
+    position: center;
+    right: 1px;
+    top: 100%;
+    font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="whatsappimage1234.jpg" alt="logo" width="400" height="100"/>
+    <form class="example" action="/action_page.php" style="margin:auto;max-width:500px">
+        <div class="input-box2">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+</header>
+<nav>
+    <a href="HOME.html" alt="Go to your home page">HOME</a>
+    <a href="YOURACCOUNT.html" alt="Go to your account page">YOUR ACCOUNT</a>
+    <a href="SHOPPINGCART.html" alt="Go to your shopping cart page">SHOPPING CART</a>
+    <a href="ABOUTUS.html" alt="Go to your about us page">ABOUT US</a>
+    <a href="CONTACTUS.html" alt="Go to your contact us page">CONTACT US</a>
+</nav>
+
+<div class="container">
+    <h1>Your Shopping Cart</h1>
+
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="cart-body">
+        </tbody>
+    </table>
+</div>
+
+<script>
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartBody = document.getElementById('cart-body');
+    cartBody.innerHTML = '';
+
+    cart.forEach((item, index) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <img src="${item.img}" alt="${item.name}">
+                <p>${item.name}</p>
+            </td>
+            <td>Rs ${item.price}</td>
+            <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+            <td>Rs ${item.price * item.quantity}</td>
+            <td><button class="fa fa-trash" onclick="removeFromCart(${index})"></button></td>`;
+        cartBody.appendChild(row);
+    });
+}
+
+function updateQuantity(index, quantity) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart[index].quantity = parseInt(quantity);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+window.onload = loadCart;
+</script>
+
+
+
+    <div class="total">
+        <p><strong>Subtotal:</strong> Rs 45,000</p>
+        <p><strong>Tax:</strong> Rs 69</p>
+        <p><strong>Total:</strong> Rs 45,069</p>
+    </div>
+
+    <div class="cart-actions">
+        <button>   Update Cart</button>
+        <button>Proceed to Checkout</button>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 NIC3 TECH | All Rights Reserved</p>
+</footer>
+</body>
+</html>
